@@ -129,20 +129,24 @@ function mostrarTecnologia(index) {
   technologyTitle.textContent = `${t.name}`;
   tecnologyParraph.textContent = `${t.description}`;
 
-}
 
+}
 
 
 mostrarTecnologia(0)
 
+
+listTechnology[0].classList.add('bg-white', 'text-black'); 
+
 listTechnology.forEach((li, index) => {
   li.addEventListener('click', () => {
-    mostrarTecnologia(index); // Primero actualizás el contenido y quitás clases
+    listTechnology.forEach(el => el.classList.remove('bg-white', 'text-black'));
 
-    li.classList.add('bg-white', 'text-black'); // Después agregás la clase al seleccionado
+    mostrarTecnologia(index);
+    li.classList.add('bg-white', 'text-black');
   });
 });
-        
+
     })
     .catch(error =>{
         console.log(error);
