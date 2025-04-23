@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="stylesheet" href="./src/output.css">
+  
+  <title>Frontend Mentor | Space tourism website</title>
+</head>
+<body>
+
+<main id="root" class="w-full ">
+<section class="  bg-[url(/starter-code/assets/home/background-home-mobile.jpg)] bg-no-repeat bg-cover  h-screen">
+  <header class="h-auto w-full p-5 flex justify-between items-center" >
+    <img src="starter-code\assets\shared\logo.svg" alt="">
+    <img src="starter-code\assets\shared\icon-hamburger.svg" alt="">
+    </header>
+  <article class="mt-15 w-5/6 m-auto ">
+
+    <div class="text-white text-center ">
+      <h2 class="font-extralight text-sm ">SO, YOU WANT TO TRAVEL TO</h2>
+      <h1 class="font-medium text-5xl my-6 font-serif tracking-widest">SPACE</h1>
+    </div>
+  
+    <p class="text-white text-center my-5  text-light text-sm/7"> Let's face it; if you want to go to space, you might as well genuinely go to outer space and not hover kind of on the edge of it. Well sit back, and relax because we'll give you a truly out of this world experience!</p>
+    <div class="w-full flex justify-center">
+  
+      <button id="btnExplore" class="text-center my-5  text-ligh bg-white rounded-full w-1/2 h-38 text-lg font-serif tracking-[0.2rem]">EXPLORE</button>
+    </div>
+  </article>
+</section>
+<section class="h-screen bg-[url(/starter-code/assets/destination/background-destination-mobile.jpg)] bg-no-repeat bg-cover w-full">
+  <h2 class="text-white text-xl font-extralight  text-center py-6 tracking-[0.2rem]">PICK YOUR DESTINATION</h2>
+  <div id="destinationSlider" class="h-full">
+    <article class="w-5/6 m-auto flex flex-col gap-6 justify-between mt-5">
+      <figure id="contPlanet" class="w-3/5 m-auto ">
+        <!-- <img src="starter-code/assets/destination/image-moon.webp" alt=""> -->
+      </figure>
+      <ul id="planets" class="flex justify-evenly text-white my-5 text-xs font-light">
+        <li class="border-b  border-white py-1 cursor-pointer ">MOON</li>
+        <li class="border-b  border-white py-1 cursor-pointer ">MARS</li>
+        <li class="border-b  border-white py-1 cursor-pointer ">EUROPA</li>
+        <li class="border-b  border-white py-1 cursor-pointer ">TITAN</li>
+      </ul>
+      <div id="containerPlanet">
+        <h3 class="text-white text-3xl font-serif mb-5">MOON</h3>
+        <p id="parraph" class="text-white text-sm"> See our planet as you’ve never seen it before. A perfect relaxing trip away to help 
+          regain perspective and come back refreshed. While you’re there, take in some history 
+          by visiting the Luna 2 and Apollo 11 landing sites.
+        </p>
+        <hr class=" border-gray-400 mt-5 mb-3 opacity-20">
+        <div class="flex justify-between">
+          <div  class="text-white">
+            <p class="text-xs font-light my-2 text-gray-400">Avg. distance </p>
+            <p id="planetDistance" class="text-lg ">  384,400 km</p>
+          </div>
+          <div  class="text-white">
+            <p class="text-xs  font-light my-2 text-gray-400">Est. travel time </p>
+            <p id="planetTravel" class="text-lg ">3 days</p>
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
+</section>
+<section  class=" bg-[url(/starter-code/assets/crew/background-crew-mobile.jpg)] bg-no-repeat bg-cover w-full min-h-screen">
+  <h2 class="text-white text-xl font-extralight  text-center py-6 tracking-[0.2rem]">MEET YOU CREW</h2>
+  <div id="crewSlider" class="">
+
+    <article class="w-5/6  m-auto h-full">
+      <figure id="sliderFigure" class="">
+        <div id="sliderImg" class="flex overflow-x-auto snap-x snap-mandatory scroll-smooth">
+
+          <!-- <img class="border-b border-gray-600" src="starter-code\assets\crew\image-anousheh-ansari.webp" alt=""> -->
+        </div>
+        <div class="w-full flex justify-center gap-3 mt-6">
+          <span class="w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
+          <span class="w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
+          <span class="w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
+          <span class="w-3 h-3 bg-gray-400 rounded-full cursor-pointer"></span>
+        </div>
+      </figure>
+      <div id="sliderInfo" class="text-center text-white py-5 flex flex-col gap-3">
+        <!-- <h4 class="text-gray-400 text-li tracking-[0.1rem] ">Flight Engineer</h4>
+        <h2 class="font-serif text-3xl ">Anousheh Ansari</h2>
+        <p class=" text-sm">Anousheh Ansari is an Iranian American engineer and co-founder of Prodea Systems. 
+          Ansari was the fourth self-funded space tourist, the first self-funded woman to 
+          fly to the ISS, and the first Iranian in space. </p> -->
+      </div>
+    </article>
+  </div>
+</section>
+<section class=" bg-[url(/starter-code/assets/technology/background-technology-mobile.jpg)] bg-no-repeat bg-cover w-full min-h-screen ">
+  <h2 class="text-white text-xl font-extralight  text-center py-6 tracking-[0.2rem]">SPACE LAUNCH 101</h2>
+  <figure id="tecnologyFigure" class="">
+  <!-- <img src="starter-code\assets\technology\image-launch-vehicle-landscape.jpg" alt=""> -->
+  </figure>
+  <article class="w-5/6  m-auto h-full mt-5">
+    <div id="sliderInfo" class="text-center text-white py-5 flex flex-col gap-3">
+     <ul id="listTechnology" class="flex justify-evenly  my-3">
+      <li class="rounded-full border-gray-500 border-2 w-1/6 h-[55px] py-3 cursor-pointer bg-white text-black">1</li>
+      <li class="rounded-full border-gray-500 border-2 w-1/6 h-[55px] py-3 cursor-pointer bg-white text-black">2</li>
+      <li class="rounded-full border-gray-500 border-2 w-1/6 h-[55px] py-3 cursor-pointer bg-white text-black">3</li>
+     </ul>
+     <div class="flex flex-col gap-4 mt-6">
+      <h5 class="font-extralight text-sm text-start">The terminology...</h5>
+      <h2 id="technologyTitle" class="text-start font-serif text-3xl">Launch vehicle</h2>
+      <p id="tecnologyParraph" class="text-start text-sm font-light"></p>
+     </div>
+    </div>
+  </article>
+</section>
+</main>
+<script src="index.js"></script>
+</body>
+</html>
