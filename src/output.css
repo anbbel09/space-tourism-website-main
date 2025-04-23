@@ -585,14 +585,26 @@
   .bg-\[url\(\'\/starter-code\/assets\/crew\/background-crew-mobile\.jpg\'\)\] {
     background-image: url('/starter-code/assets/crew/background-crew-mobile.jpg');
   }
+  .bg-\[url\(\'\/starter-code\/assets\/crew\/background-crew-tablet\.jpg\'\)\] {
+    background-image: url('/starter-code/assets/crew/background-crew-tablet.jpg');
+  }
   .bg-\[url\(\'\/starter-code\/assets\/destination\/background-destination-mobile\.jpg\'\)\] {
     background-image: url('/starter-code/assets/destination/background-destination-mobile.jpg');
+  }
+  .bg-\[url\(\'\/starter-code\/assets\/destination\/background-destination-tablet\.jpg\'\)\] {
+    background-image: url('/starter-code/assets/destination/background-destination-tablet.jpg');
   }
   .bg-\[url\(\'\/starter-code\/assets\/home\/background-home-mobile\.jpg\'\)\] {
     background-image: url('/starter-code/assets/home/background-home-mobile.jpg');
   }
+  .bg-\[url\(\'\/starter-code\/assets\/home\/background-home-tablet\.jpg\'\)\] {
+    background-image: url('/starter-code/assets/home/background-home-tablet.jpg');
+  }
   .bg-\[url\(\'\/starter-code\/assets\/technology\/background-technology-mobile\.jpg\'\)\] {
     background-image: url('/starter-code/assets/technology/background-technology-mobile.jpg');
+  }
+  .bg-\[url\(\'\/starter-code\/assets\/technology\/background-technology-tablet\.jpg\'\)\] {
+    background-image: url('/starter-code/assets/technology/background-technology-tablet.jpg');
   }
   .bg-\[url\(\/starter-code\/assets\/crew\/background-crew-mobile\.jpg\)\] {
     background-image: url(/starter-code/assets/crew/background-crew-mobile.jpg);

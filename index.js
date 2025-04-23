@@ -4,10 +4,10 @@ const sections = document.querySelectorAll('main > section');
 const main = document.getElementById('root');
 
 const backgrounds = {
-  home: "bg-[url('/starter-code/assets/home/background-home-mobile.jpg')]",
-  destination: "bg-[url('/starter-code/assets/destination/background-destination-mobile.jpg')]",
-  crew: "bg-[url('/starter-code/assets/crew/background-crew-mobile.jpg')]",
-  technology: "bg-[url('/starter-code/assets/technology/background-technology-mobile.jpg')]"
+  home: "bg-[url('/starter-code/assets/home/background-home-tablet.jpg')]",
+  destination: "bg-[url('/starter-code/assets/destination/background-destination-tablet.jpg')]",
+  crew: "bg-[url('/starter-code/assets/crew/background-crew-tablet.jpg')]",
+  technology: "bg-[url('/starter-code/assets/technology/background-technology-tablet.jpg')]"
 };
 
 function showSection(id) {
@@ -26,6 +26,14 @@ function showSection(id) {
 navItems.forEach(item => {
   item.addEventListener('click', () => {
     const target = item.getAttribute('data-section');
+
+    // Quitar el borde de todos los ítems
+    navItems.forEach(nav => nav.classList.remove('border-b', 'border-white'));
+
+    // Agregar el borde solo al ítem activo
+    item.classList.add('border-b', 'border-white');
+
+    // Mostrar la sección correspondiente
     showSection(target);
   });
 });
