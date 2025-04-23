@@ -70,7 +70,7 @@ const indicatorSpans = document.querySelectorAll("figure span");
 crew.forEach((c, i) => {
   sliderImg.innerHTML += `
     <img data-id="${i}" 
-         class="crew-img border-b border-gray-600 snap-center px-10" 
+         class="crew-img border-b border-gray-600 snap-center px-14" 
          src="${c.images.webp}" 
          alt="${c.name}">
   `;
