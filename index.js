@@ -1,46 +1,62 @@
 
-const navItems = document.querySelectorAll('nav ul li');
-const sections = document.querySelectorAll('main > section');
-const main = document.getElementById('root');
 
-const backgrounds = {
-  home: "bg-[url('/starter-code/assets/home/background-home-tablet.jpg')]",
-  destination: "bg-[url('/starter-code/assets/destination/background-destination-tablet.jpg')]",
-  crew: "bg-[url('/starter-code/assets/crew/background-crew-tablet.jpg')]",
-  technology: "bg-[url('/starter-code/assets/technology/background-technology-tablet.jpg')]"
-};
-
-function showSection(id) {
-  sections.forEach(section => {
-    section.classList.add('md:hidden');
-    if (section.id === id) section.classList.remove('md:hidden');
-  });
-
-  // Resetear clases base del main
-  main.className = 'min-h-screen w-full bg-no-repeat bg-cover transition-all duration-500';
-  // Agregar la clase de fondo correspondiente
-  main.classList.add(backgrounds[id]);
-}
-
-
-navItems.forEach(item => {
-  item.addEventListener('click', () => {
-    const target = item.getAttribute('data-section');
-
-    // Quitar el borde de todos los ítems
-    navItems.forEach(nav => nav.classList.remove('border-b', 'border-white'));
-
-    // Agregar el borde solo al ítem activo
-    item.classList.add('border-b', 'border-white');
-
-    // Mostrar la sección correspondiente
-    showSection(target);
-  });
-});
 
 window.addEventListener('DOMContentLoaded', () => {
+  const navItems = document.querySelectorAll('nav ul li');
+  const sections = document.querySelectorAll('main > section');
+  const main = document.getElementById('root');
+  
+  // Obtener el tipo de pantalla
+  function getScreenType() {
+    if (window.matchMedia("(min-width: 1024px)").matches) {
+      return 'desktop';
+    } else if (window.matchMedia("(min-width: 768px)").matches) {
+      return 'tablet';
+    } else {
+      return 'mobile';
+    }
+  }
+  
+  // Obtener la URL real del background (no una clase de Tailwind)
+  function getBackgroundUrl(id, screenType) {
+    return `/starter-code/assets/${id}/background-${id}-${screenType}.jpg`;
+  }
+  
+  function showSection(id) {
+    const screenType = getScreenType();
+  
+    // Mostrar solo la sección correspondiente
+    sections.forEach(section => {
+      section.classList.add('md:hidden');
+      if (section.id === id) {
+        section.classList.remove('md:hidden');
+      }
+    });
+  
+    // Resetear clases base
+    main.className = 'min-h-screen w-full bg-no-repeat bg-cover ';
+  
+    // Aplicar fondo directamente con estilo en línea
+    const imageUrl = getBackgroundUrl(id, screenType);
+    main.style.backgroundImage = `url('${imageUrl}')`;
+  }
+  
+  navItems.forEach(item => {
+    item.addEventListener('click', () => {
+      const target = item.getAttribute('data-section');
+  
+      // Resetear clases activas de navegación
+      navItems.forEach(i => i.classList.remove('border-b', 'border-white'));
+      item.classList.add('border-b', 'border-white');
+  
+      // Mostrar sección
+      showSection(target);
+    });
+  });
+  
+  // Mostrar sección por defecto
   showSection('home');
- 
+  
      
       fetch('/starter-code/data.json')
       .then(res => res.json())
